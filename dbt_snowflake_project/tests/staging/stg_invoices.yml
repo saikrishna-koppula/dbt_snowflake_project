@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_invoices
+    description: Staged invoice data
+    columns:
+      - name: invoice_id
+        tests:
+          - not_null
+          - unique
+      - name: po_id
+        tests:
+          - not_null
+      - name: amount_due
+        tests:
+          - not_null

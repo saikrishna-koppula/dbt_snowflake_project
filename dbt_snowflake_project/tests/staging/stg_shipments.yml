@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_shipments
+    description: Staged shipment data
+    columns:
+      - name: shipment_id
+        tests:
+          - not_null
+          - unique
+      - name: po_id
+        tests:
+          - not_null
+      - name: shipment_date
+        tests:
+          - not_null

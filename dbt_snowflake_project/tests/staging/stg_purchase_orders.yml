@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_purchase_orders
+    description: Staged purchase orders
+    columns:
+      - name: po_id
+        tests:
+          - not_null
+          - unique
+      - name: supplier_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null

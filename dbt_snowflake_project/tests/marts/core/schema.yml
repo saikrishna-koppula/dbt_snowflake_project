@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: dim_suppliers
+    description: Dimension table for supplier details.
+    columns:
+      - name: supplier_id
+        tests:
+          - not_null
+          - unique
+      - name: supplier_name
+        tests:
+          - not_null
+
+  - name: dim_products
+    description: Dimension table for product details.
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        tests:
+          - not_null
+
+  - name: fct_purchase_orders
+    description: Fact table with purchase order transactions.
+    columns:
+      - name: po_id
+        tests:
+          - not_null
+          - unique
+      - name: supplier_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+
+  - name: fct_shipments
+    description: Fact table with shipment information.
+    columns:
+      - name: shipment_id
+        tests:
+          - not_null
+          - unique
+      - name: po_id
+        tests:
+          - not_null
+
+  - name: fct_invoices
+    description: Fact table for invoice records.
+    columns:
+      - name: invoice_id
+        tests:
+          - not_null
+          - unique
+      - name: po_id
+        tests:
+          - not_null
+
+  - name: fct_payments
+    description: Fact table for payment transactions.
+    columns:
+      - name: payment_id
+        tests:
+          - not_null
+          - unique
+      - name: invoice_id
+        tests:
+          - not_null

@@ -1,0 +1,32 @@
+# Ignore virtual environment
+../dbt_project_env/
+
+# Ignore DBT logs and compiled artifacts
+logs/
+dbt_snowflake_project/target/
+dbt_snowflake_project/dbt_packages/
+dbt_snowflake_project/logs/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Ignore system and editor files
+.DS_Store
+*.swp
+*.bak
+
+# Ignore data generation outputs (if not needed in Git)
+Data\ Generation/supply_chain_data/*.csv
+
+# Ignore generated CSV files
+Data Generation/supply_chain_data/*.csv
+
+# Office temp files
+~$*
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
