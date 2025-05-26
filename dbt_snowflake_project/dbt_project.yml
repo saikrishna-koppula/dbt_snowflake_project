@@ -39,3 +39,20 @@ models:
       +schema: stg
     marts:
       +schema: marts
+
+
+snapshots:
+  dbt_snowflake_project:
+    +target_schema: snapshots
+    +materialized: snapshot
+    paths: ["snapshots"]
+
+seeds:
+  dbt_snowflake_project:
+    +schema: src
+    
+    category_mapping:
+      +quote_columns: false
+      +column_types:
+        category: string
+        category_description: string
