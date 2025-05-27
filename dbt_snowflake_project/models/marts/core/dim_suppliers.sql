@@ -1,4 +1,4 @@
-{{ config(materialized='view', alias='v_dim_suppliers') }}
+{{ config(materialized='table', alias='dim_suppliers') }}
 
 select
     supplier_id,

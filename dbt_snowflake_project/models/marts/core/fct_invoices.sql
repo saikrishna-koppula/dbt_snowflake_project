@@ -1,4 +1,4 @@
-{{ config(materialized='view', alias='v_fct_invoices') }}
+{{ config(materialized='table', alias='fct_invoices') }}
 
 select
     inv.invoice_id,
