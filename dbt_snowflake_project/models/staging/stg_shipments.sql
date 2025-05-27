@@ -1,6 +1,6 @@
 {{ config(
-    materialized='view',
-    alias='v_stg_shipments'
+    materialized='table',
+    alias='stg_shipments'
 ) }}
 
 with source as (
