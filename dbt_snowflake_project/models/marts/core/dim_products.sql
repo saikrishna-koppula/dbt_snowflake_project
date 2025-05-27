@@ -1,4 +1,4 @@
-{{ config(materialized='view', alias='v_dim_products') }}
+{{ config(materialized='table', alias='dim_products') }}
 
 select
     product_id,

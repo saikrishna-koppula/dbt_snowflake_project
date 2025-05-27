@@ -1,4 +1,4 @@
-{{ config(materialized='view', alias='v_fct_shipments') }}
+{{ config(materialized='table', alias='fct_shipments') }}
 
 select
     sh.shipment_id,

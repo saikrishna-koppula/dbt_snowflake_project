@@ -1,4 +1,4 @@
-{{ config(materialized='view', alias='v_fct_purchase_orders') }}
+{{ config(materialized='table', alias='fct_purchase_orders') }}
 
 select
     po.po_id,
